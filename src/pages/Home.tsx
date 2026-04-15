@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import { ChevronRight, ChevronLeft, ArrowRight, Star, Sparkles, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { products } from '../data/products';
@@ -93,13 +94,13 @@ const Home: React.FC = () => {
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     enter: (dir: string) => ({ opacity: 0, scale: 1.08, x: dir === 'next' ? 60 : -60 }),
     center: { opacity: 1, scale: 1, x: 0, transition: { duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] } },
     exit: (dir: string) => ({ opacity: 0, scale: 0.96, x: dir === 'next' ? -60 : 60, transition: { duration: 0.8 } }),
   };
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: (delay: number) => ({
       opacity: 1, y: 0,
