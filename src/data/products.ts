@@ -13,7 +13,7 @@ export const products: Product[] = [
     id: 'p1',
     name: 'Classic Pure Kova',
     price: 350,
-    image: '/image.png',
+    image: '/kova_gourmet_1.png',
     category: 'Traditional Sweets',
     description: 'Our signature pure milk Kova, slow-cooked to perfection over firewood. Rich, creamy, and melts in your mouth with an authentic sweet aroma.',
     featured: true,

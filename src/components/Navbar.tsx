@@ -37,10 +37,16 @@ const Navbar: React.FC = () => {
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 z-50">
-            <h1 className={`font-serif text-2xl md:text-3xl font-bold tracking-tight ${isScrolled ? 'text-brown-900' : 'text-brown-900'}`}>
-              Murthy's <span className="text-gold-500 italic">Kova</span>
-            </h1>
+          <Link to="/" className="flex items-center space-x-3 z-50 group">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-lg transition-transform duration-300 group-hover:scale-110 shadow-sm border border-gold-500/20">
+              <img src="/logo_premium.png" alt="Murthy's Logo" className="w-full h-full object-cover" />
+            </div>
+            <div className="hidden sm:block">
+              <h1 className={`font-serif text-xl md:text-2xl font-bold tracking-tight ${isScrolled ? 'text-brown-900' : 'text-brown-900'}`}>
+                Murthy's <span className="text-gold-500 italic">Kova</span>
+              </h1>
+              <p className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] text-brown-900/50 -mt-1 font-bold">Est. 1986</p>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
